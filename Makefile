@@ -7,6 +7,8 @@ $(error $(CONFIG_FILE) not found. See $(CONFIG_FILE).example.)
 endif
 include $(CONFIG_FILE)
 
+
+
 BUILD_DIR_LINK := $(BUILD_DIR)
 ifeq ($(RELEASE_BUILD_DIR),)
 	RELEASE_BUILD_DIR := .$(BUILD_DIR)_release
@@ -183,7 +185,6 @@ LIBRARIES += glog gflags protobuf boost_system boost_filesystem m
 # handle IO dependencies
 USE_LEVELDB ?= 1
 USE_LMDB ?= 1
-# This code is taken from https://github.com/sh1r0/caffe-android-lib
 USE_HDF5 ?= 1
 USE_OPENCV ?= 1
 
